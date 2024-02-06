@@ -597,8 +597,8 @@ def test_component_with_only_valid_children(fixture, request):
     [
         (rx.text("hi"), "<Text>\n  {`hi`}\n</Text>"),
         (
-            rx.box(rx.heading("test", size="md")),
-            "<Box>\n  <Heading size={`md`}>\n  {`test`}\n</Heading>\n</Box>",
+            rx.box(rx.heading("test", as_="h3", size="md")),
+            "<Box>\n  <Heading as={`as`} size={`md`}>\n  {`test`}\n</Heading>\n</Box>",
         ),
     ],
 )
